@@ -23,7 +23,7 @@ const MessageList = () => {
   return (
     <div >
       {data.palanca.map((item, index) => (
-        <div key={index} style={{justifySelf: 'stretch', placeSelf: 'center', border: '2px solid black'}}>
+        <div key={index} style={{justifySelf: 'stretch', placeSelf: 'center', border: '1px solid black', padding: "10px", margin: '10px'}}>
            <h2>Subject: {item.subject}</h2>
            <h2>From: {item.author_name}</h2>
           <p>{item.message}</p>
