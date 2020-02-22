@@ -27,7 +27,9 @@ function IndexPage(){
     return (
       <>
       <Layout>
-        <form style={{paddingTop: '200px', paddingLeft: "100px"}}>
+        <h1 style={{paddingLeft: "240px", paddingTop: '100px'}}>Welcome!</h1>
+        <h2 style={{paddingLeft: "50px", paddingTop: '30px'}}>Create a collection of messages for a special occation.</h2>
+        <form style={{paddingTop: '100px', paddingLeft: "100px"}}>
       <input
         name="author_name"
         placeholder="Name"
