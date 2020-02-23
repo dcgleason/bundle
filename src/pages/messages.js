@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
 import gql from "graphql-tag";
 import MessageList from "../components/MessageList";
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 
 
 function Messages(props){
