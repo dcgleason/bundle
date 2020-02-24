@@ -14,7 +14,7 @@ This app also allowed me to explore Gatsby, GraphQL, Apollo and Hasura.
 
 [Deployed site](https://www.bundledev.netlify.com)._
 
-## 🚀 Noteworthy Bits
+## 🚀 What is Noteworthy
 
 1.  **Code snippet**
 
@@ -22,19 +22,20 @@ This app also allowed me to explore Gatsby, GraphQL, Apollo and Hasura.
 
     ```index.js
     
-const ADD_MESSAGES = gql`
-mutation addMessage($author_name: String!, $subject: String!, $message: String!) {
-  insert_palanca(objects: {author_name: $author_name, message: $message, subject: $subject}) {
-    returning {
-      message
-      subject
-      author_name
+    const ADD_MESSAGES = gql`
+    mutation addMessage($author_name: String!, $subject: String!, $message: String!) {
+      insert_palanca(objects: {author_name: $author_name, message: $message, subject: $subject}) {
+        returning {
+          message
+          subject
+          author_name
+        }
+      }
     }
-  }
-}
 
 
-`;
+    `;
+
 function IndexPage(){
  
     const [subject, setSubject]=useState('')
