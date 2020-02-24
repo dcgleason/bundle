@@ -36,45 +36,45 @@ This app also allowed me to explore Gatsby, GraphQL, Apollo and Hasura.
 
     `;
 
-function IndexPage(){
- 
-    const [subject, setSubject]=useState('')
-    const [message, setMessage]=useState('')
-    const [author_name, setAuthor]=useState('')
-    const [addMessage] = useMutation(ADD_MESSAGES)
-    console.log(message, author_name, subject)
+      function IndexPage(){
+      
+          const [subject, setSubject]=useState('')
+          const [message, setMessage]=useState('')
+          const [author_name, setAuthor]=useState('')
+          const [addMessage] = useMutation(ADD_MESSAGES)
+          console.log(message, author_name, subject)
 
-    return (
-      <>
-      <Layout>
-        <h1 style={{paddingLeft: "240px", paddingTop: '100px'}}>Welcome!</h1>
-        <h2 style={{paddingLeft: "50px", paddingTop: '30px'}}>Create a collection of messages for a special occation.</h2>
-        <form style={{paddingTop: '100px', paddingLeft: "100px"}}>
-      <input
-        name="author_name"
-        placeholder="Name"
-        onChange={e => setAuthor(e.target.value)}
-      />
-      <input
-        name="subject"
-        placeholder="Subject"
-        onChange={e => setSubject(e.target.value)}
-      />
-      <input
-        name="message"
-        type="text"
-        placeholder="Message"
-        onChange={e => setMessage(e.target.value)}
-      />
-      <button  onClick={e => {
-        e.preventDefault();
-        addMessage({ variables: { author_name: author_name, subject: subject, message: message } });
-      }} >Submit</button>
-    </form>
-    </Layout>
-    </>
-    )
-  }
+          return (
+            <>
+            <Layout>
+              <h1 style={{paddingLeft: "240px", paddingTop: '100px'}}>Welcome!</h1>
+              <h2 style={{paddingLeft: "50px", paddingTop: '30px'}}>Create a collection of messages for a special occation.</h2>
+              <form style={{paddingTop: '100px', paddingLeft: "100px"}}>
+            <input
+              name="author_name"
+              placeholder="Name"
+              onChange={e => setAuthor(e.target.value)}
+            />
+            <input
+              name="subject"
+              placeholder="Subject"
+              onChange={e => setSubject(e.target.value)}
+            />
+            <input
+              name="message"
+              type="text"
+              placeholder="Message"
+              onChange={e => setMessage(e.target.value)}
+            />
+            <button  onClick={e => {
+              e.preventDefault();
+              addMessage({ variables: { author_name: author_name, subject: subject, message: message } });
+            }} >Submit</button>
+          </form>
+          </Layout>
+          </>
+          )
+        }
     ```
 
 2.  **Future Plans**
