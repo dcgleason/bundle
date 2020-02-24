@@ -14,7 +14,7 @@ module.exports = {
         // This is the field under which it's accessible
         fieldName: "palance",
         // URL to query from
-        url: "https://bundle1990.herokuapp.com/v1/graphql",
+        url: "https://bundle-messages.herokuapp.com/v1/graphql",
       },
     },
   ]
