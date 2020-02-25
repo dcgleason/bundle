@@ -8,7 +8,7 @@
   Bundle Message Collector (for special occations)
 </h1>
 
-Bundle is an app that collects messages for someone's special occation. The idea of this app was thought of a about 5 years ago, when I took my first steps to learn how to code, so, although it is a relatively simple app, it is something of importance to me. 
+Bundle is an app that collects messages for someone's special occasion. The idea of this app was thought of a about 5 years ago, when I took my first steps to learn how to code, so, although it is a relatively simple app, it is something of importance to me. 
 
 This app also allowed me to explore Gatsby, GraphQL, Apollo and Hasura.
 
@@ -69,6 +69,9 @@ This app also allowed me to explore Gatsby, GraphQL, Apollo and Hasura.
             <button  onClick={e => {
               e.preventDefault();
               addMessage({ variables: { author_name: author_name, subject: subject, message: message } });
+              setAuthor('')
+              setSubject('')
+              setMessage('')
             }} >Submit</button>
           </form>
           </Layout>

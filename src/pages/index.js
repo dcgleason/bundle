@@ -28,27 +28,35 @@ function IndexPage(){
       <>
       <Layout>
         <h1 style={{paddingLeft: "240px", paddingTop: '100px'}}>Welcome!</h1>
-        <h2 style={{paddingLeft: "50px", paddingTop: '30px'}}>Create a collection of messages for a special occation.</h2>
+        <h2 style={{paddingLeft: "50px", paddingTop: '30px'}}>Create a collection of messages for a special occasion.</h2>
         <form style={{paddingTop: '100px', paddingLeft: "100px"}}>
       <input
         name="author_name"
         placeholder="Name"
+        type="text"
+        value={author_name}
         onChange={e => setAuthor(e.target.value)}
       />
       <input
         name="subject"
         placeholder="Subject"
+        type="text"
+        value={subject}
         onChange={e => setSubject(e.target.value)}
       />
       <input
         name="message"
         type="text"
+        value={message}
         placeholder="Message"
         onChange={e => setMessage(e.target.value)}
       />
       <button  onClick={e => {
         e.preventDefault();
         addMessage({ variables: { author_name: author_name, subject: subject, message: message } });
+        setAuthor('')
+        setSubject('')
+        setMessage('')
       }} >Submit</button>
     </form>
     </Layout>
