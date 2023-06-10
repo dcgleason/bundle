@@ -22,7 +22,7 @@
     "apollo-link-ws": "^1.0.19",
     "bootstrap": "^4.4.1",
     "es6-promise": "^4.2.8",
-    "gatsby": "^2.19.7",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-apollo": "^3.0.1",
     "gatsby-plugin-emotion": "^4.1.22",
     "gatsby-plugin-layout": "^1.1.22",
